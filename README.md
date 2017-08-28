@@ -1,6 +1,9 @@
 # jobs-scraper-team-consonants
 This repository is for team A: Ghaith &amp; Ghada
 
+## Using this repo:
+We wont be directly writting into this repo, please consider forking it, whenever you are adding code you can add a pul request here, this would make code review smoother.
+
 ## Challenge:
 In order to optimise it's search for remote jobs Think.it thought of a scraper to centralize the relevants opportunities in one output.
 
