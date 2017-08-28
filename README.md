@@ -22,3 +22,11 @@ Ideally you want to have something running early to engage with the clients and 
 You will be frustrated if your app crach during demo or shippement.
 
 Your client will value more your solution if his technical team understand it.
+## Commands
+
+
+$mongo -> opens mongo command line
+
+>uses db -> uses "db"
+
+>db.collection.find().pretty() -> displays collection content
