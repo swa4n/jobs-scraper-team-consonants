@@ -22,11 +22,16 @@ Ideally you want to have something running early to engage with the clients and 
 You will be frustrated if your app crach during demo or shippement.
 
 Your client will value more your solution if his technical team understand it.
+
+
 ## Commands
 
+### To install mongo client and server on the project ubuntu
 
-$mongo -> opens mongo command line
+> sudo apt install mongodb-clients mongodb-server
 
->uses db -> uses "db"
+>$mongo -> opens mongo command line
+
+>uses db -> use "dbName"
 
 >db.collection.find().pretty() -> displays collection content
