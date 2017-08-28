@@ -1,17 +1,18 @@
 import requests
+import pymongo as pm
 import json
-execfile ("database.py")
+client=pm.MongoClient('localhost', 27017) #connecting to mongodb
+db=client['thinkit'] #connecting to database
+offers=db.offers #getting collection
+db.offers.delete_many({})
 keyword= input()
 link="http://jobs.github.com/positions.json?description="+keyword
 r=requests.get(link)
 joblist =json.loads(r.text)
 for job in joblist:
-
-	cur.execute("INSERT INTO offers (title, description , date, type , location, url) VALUES(%s,%s,%s,%s,%s,%s)",(job['title'],job['description'],job['created_at'],job['type'],job['location'],job['url']))	
-	db.commit()
-
-
-
-cur.close()
-db.close()
-
+	#print(job['title'])
+	result=offers.insert_one(job)
+	#print(result.inserted_id)
+cursor = db.offers.find()
+for doc in cursor:
+	print(doc)
