@@ -1,5 +1,4 @@
 import pymongo as pm
-
 def main():
 	client=pm.MongoClient('localhost', 27017) #connecting to mongodb
 	db=client['thinkit'] #connecting to database
