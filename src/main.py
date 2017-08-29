@@ -1,19 +1,16 @@
 import requests
-
 import json
-import sources from "./source.py"
+from source import *
+import database
 
-
+db = database.main()
 keyword= input()
-
-
-
-r=requests.get(link)
-joblist =json.loads(r.text)
-for job in joblist:
-	#print(job['title'])
-	result=offers.insert_one(job)
-	#print(result.inserted_id)
+for link in links:
+	link.replace("{{keyword}}",keyword)
+	r=requests.get(link)
+	joblist =json.loads(r.text)
+	for job in joblist:
+		result=db.offers.insert_one(job)
 
 
 
