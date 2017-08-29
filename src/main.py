@@ -2,7 +2,6 @@ import requests
 import json
 from source import *
 import database
-
 db = database.main()
 keyword= input()
 for link in links:
