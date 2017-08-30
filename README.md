@@ -38,3 +38,7 @@ Your client will value more your solution if his technical team understand it.
 >uses db -> use "dbName"
 
 >db.collection.find().pretty() -> displays collection content
+
+###To run the python code:
+with the comande line, we go into the project folder and run :
+>python main.py
