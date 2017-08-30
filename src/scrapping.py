@@ -10,7 +10,9 @@ from source import *
 
 
 #Scrapping is importing data from the link in the source file and inserting the result in the Database
-
+def convert_to_json_array(r):
+	result = json.loads(r.text)
+	return result
 def main(db, keyword):
 	
 	i=1
@@ -21,7 +23,7 @@ def main(db, keyword):
 		print("Requesting link %d ..." %i)
 		r=requests.get(link)
 		print("Request complete, converting to array of JSON objects...")
-		joblist =json.loads(r.text)
+		joblist = convert_to_json_array(r)
 		print("Conversion complete! Number of job offers found : %d" %len(joblist))
 		for job in joblist:
 			result=db.offers.insert_one(job)

@@ -1,6 +1,6 @@
 import unittest
 import sys
-from scrapping import *
+from main import *
 class TestScrapping(unittest.TestCase):
 	def testkeyword(self):
 		self.assertEqual(input_sanitizer('"Big Data"'), "big+data")
